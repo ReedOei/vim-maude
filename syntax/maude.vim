@@ -39,7 +39,6 @@ syn match   maudeModules    "META-TERM"
 syn match   maudeModules    "META-LEVEL"
 syn match   maudeModules    "LOOP-MODE"
 syn match   maudeModules    "CONFIGURATION"
-syn match   maudeModules    "\([A-Z]\-\?\)\+"
 
 syn keyword maudeSorts      Bool Int Float Nat Qid
 syn keyword maudeSorts      Zero NzNat NzInt NzRat Rat FiniteFloat
