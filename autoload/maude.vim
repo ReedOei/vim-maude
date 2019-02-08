@@ -39,6 +39,7 @@ endfunction
 
 function! maude#ReloadMaudeIds()
     call maude#DynamicHighlight("sort", "dynMaudeSorts", "Type")
-    call maude#DynamicHighlight("op", "dynMaudeOps", "Identifier")
+    call maude#DynamicHighlight("op", "dynMaudeOps", "Function")
+    call maude#DynamicHighlight("var", "dynMaudeVar", "Identifier")
 endfunction
 
