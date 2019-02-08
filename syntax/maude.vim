@@ -18,9 +18,10 @@ syn keyword maudeImports    protecting including extending
 syn keyword maudeSorts      sort sorts subsort subsorts
 syn keyword maudeStatements op ops var vars eq ceq rl crl
 syn match   maudeFlags      "\[.*\]"
-syn keyword maudeCommands   reduce load search
+syn keyword maudeCommands   reduce load search red
 syn match   maudeComment    "\*\*\*.*"
 syn match   maudeComment    "---.*"
+syn match   maudeTODO       "TODO.*"
 syn match   maudeOps        "->"
 syn match   maudeOps        "|->"
 syn match   maudeOps        ":"
@@ -40,7 +41,7 @@ syn match   maudeModules    "META-LEVEL"
 syn match   maudeModules    "LOOP-MODE"
 syn match   maudeModules    "CONFIGURATION"
 
-syn keyword maudeSorts      Bool Int Float Nat Qid
+syn keyword maudeSorts      Bool Int Float Nat Qid Set List Map
 syn keyword maudeSorts      Zero NzNat NzInt NzRat Rat FiniteFloat
 syn keyword maudeSorts      String Char FindResult DecFloat
 
@@ -102,6 +103,7 @@ MaudeHiLink maudeCommands   Special
 MaudeHiLink maudeFlags      PreProc
 MaudeHiLink maudeSorts      Type
 MaudeHiLink maudeLiteral    String
+MaudeHiLink maudeTODO       Todo
 "hi def     maudeMisc       term=bold cterm=bold gui=bold
 
 delcommand MaudeHiLink
