@@ -22,7 +22,7 @@ function! maude#DynamicHighlight(k, synGroup, highlight)
         execute "syn clear " . a:synGroup
     endif
 
-    let list = FindKeyword(a:k)
+    let list = maude#FindKeyword(a:k)
     let wordList = []
 
     for i in list
@@ -38,7 +38,7 @@ function! maude#DynamicHighlight(k, synGroup, highlight)
 endfunction
 
 function! maude#ReloadMaudeIds()
-    call DynamicHighlight("sort", "dynMaudeSorts", "Type")
-    call DynamicHighlight("op", "dynMaudeOps", "Identifier")
+    call maude#DynamicHighlight("sort", "dynMaudeSorts", "Type")
+    call maude#DynamicHighlight("op", "dynMaudeOps", "Identifier")
 endfunction
 
