@@ -2,7 +2,7 @@
 " on every read/write of files with the maude filetype
 " Author: Reed Oei <me@reedoei.com>
 
-function! FindKeyword(keyword)
+function! maude#FindKeyword(keyword)
     let file = readfile(expand("%:p"))
 
     let res = []
@@ -17,7 +17,7 @@ function! FindKeyword(keyword)
     return res
 endfunction
 
-function! DynamicHighlight(k, synGroup, highlight)
+function! maude#DynamicHighlight(k, synGroup, highlight)
     if hlID(a:synGroup) != 0
         execute "syn clear " . a:synGroup
     endif
@@ -37,10 +37,8 @@ function! DynamicHighlight(k, synGroup, highlight)
     endif
 endfunction
 
-function! ReloadMaudeIds()
+function! maude#ReloadMaudeIds()
     call DynamicHighlight("sort", "dynMaudeSorts", "Type")
     call DynamicHighlight("op", "dynMaudeOps", "Identifier")
 endfunction
-
-au BufNewFile,BufReadPost,BufWritePost *.maude :call ReloadMaudeIds()
 
