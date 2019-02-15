@@ -13,7 +13,7 @@ endif
 
 command! -nargs=+ MaudeHiLink hi def link <args>
 
-syn keyword maudeModule     mod fmod omod view endm endfm endm endv is from to
+syn keyword maudeModule     mod fmod omod view endm endfm endm endv is from to fth endfth
 syn keyword maudeImports    protecting including extending
 syn keyword maudeSorts      sort sorts subsort subsorts
 syn keyword maudeStatements op ops var vars eq ceq rl crl
@@ -21,7 +21,7 @@ syn match   maudeFlags      "\[.*\]"
 syn keyword maudeCommands   reduce load search red
 syn match   maudeComment    "\*\*\*.*"
 syn match   maudeComment    "---.*"
-syn match   maudeTODO       "TODO.*"
+syn match   maudeTODO       "--- TODO.*"
 syn match   maudeOps        "->"
 syn match   maudeOps        "|->"
 syn match   maudeOps        ":"
