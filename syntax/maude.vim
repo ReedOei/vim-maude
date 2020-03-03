@@ -18,7 +18,7 @@ syn keyword maudeImports    protecting including extending
 syn keyword maudeSorts      sort sorts subsort subsorts
 syn keyword maudeStatements op ops var vars eq ceq rl crl
 syn match   maudeFlags      "\[.*\]"
-syn keyword maudeCommands   reduce load search red
+syn keyword maudeCommands   reduce load search red unify set
 syn match   maudeComment    "\*\*\*.*"
 syn match   maudeComment    "---.*"
 syn match   maudeTODO       "--- TODO.*"
