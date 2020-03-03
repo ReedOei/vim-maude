@@ -8,6 +8,10 @@ function! maude#Trim(input_string)
 endfunction
 
 function! maude#FindKeyword(keyword)
+    if ! filereadable(expand("%:p"))
+        return []
+    endif
+
     let file = readfile(expand("%:p"))
 
     let res = []
