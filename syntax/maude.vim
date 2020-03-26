@@ -28,6 +28,7 @@ syn match   maudeOps        ":"
 "syn match   maudeOps        "^\s*subsorts[^<]*<"hs=e-1
 "syn match   maudeOps        "^\s*ceq[^=]*="
 syn match   maudeOps        "="
+syn match   maudeOps        "=>"
 syn match   maudeOps        "\.\s*$"
 
 syn keyword maudeModules    INT FLOAT NAT RAT BOOL QID TRUTH IDENTICAL STRING MAP LIST SET
