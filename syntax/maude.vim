@@ -17,7 +17,7 @@ syn keyword maudeModule     mod fmod omod view endm endfm endm endv is from to f
 syn keyword maudeImports    protecting including extending
 syn keyword maudeSorts      sort sorts subsort subsorts
 syn keyword maudeStatements op ops var vars eq ceq rl crl
-syn match   maudeFlags      "\[.*\]"
+" syn match   maudeFlags      "\[.*\]"
 syn keyword maudeCommands   reduce load search red unify set rewrite rew
 syn match   maudeComment    "\*\*\*.*"
 syn match   maudeComment    "---.*"
@@ -102,6 +102,7 @@ MaudeHiLink maudeComment    Comment
 MaudeHiLink maudeOps        Special
 MaudeHiLink maudeCommands   Special
 MaudeHiLink maudeFlags      PreProc
+MaudeHiLink maudeAttrs      PreProc
 MaudeHiLink maudeSorts      Type
 MaudeHiLink maudeLiteral    String
 MaudeHiLink maudeTODO       Todo
