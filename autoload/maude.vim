@@ -23,7 +23,7 @@ function! maude#FindKeyword(keyword)
 
         if match != []
             for m in match[1:]
-                let trimmed = maude#Trim(m)
+                let trimmed = escape(maude#Trim(m), "\\")
 
                 if trimmed != ""
                     let res = res + [trimmed]
@@ -57,9 +57,9 @@ endfunction
 
 function! maude#ReloadMaudeIds()
     call maude#DynamicHighlight("ops\\=", "dynMaudeOps", "Function")
-    call maude#DynamicHighlight("vars\\=", "dynMaudeVar", "Identifier")
+    call maude#DynamicHighlight("vars\\=", "dynMaudeVar", "Type")
     " This should be last, sorts should have the highest precedence (not
     " ideal, but without a smarter script, this is hard to improve on)
-    call maude#DynamicHighlight("sorts\\=", "dynMaudeSorts", "Type")
+    call maude#DynamicHighlight("sorts\\=", "dynMaudeSorts", "Todo")
 endfunction
 

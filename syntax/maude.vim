@@ -95,7 +95,6 @@ MaudeHiLink maudeModule     PreProc
 MaudeHiLink maudeFloat      Float
 MaudeHiLink maudeNumber     Constant
 MaudeHiLink maudeImports    PreProc
-MaudeHiLink maudeSorts      Type
 MaudeHiLink maudeStatements Keyword
 MaudeHiLink maudeModules    String
 MaudeHiLink maudeComment    Comment
@@ -103,7 +102,7 @@ MaudeHiLink maudeOps        Special
 MaudeHiLink maudeCommands   Special
 MaudeHiLink maudeFlags      PreProc
 MaudeHiLink maudeAttrs      PreProc
-MaudeHiLink maudeSorts      Type
+MaudeHiLink maudeSorts      Todo
 MaudeHiLink maudeLiteral    String
 MaudeHiLink maudeTODO       Todo
 "hi def     maudeMisc       term=bold cterm=bold gui=bold
