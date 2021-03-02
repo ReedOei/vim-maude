@@ -17,7 +17,7 @@ function! maude#FindKeyword(keyword)
     let res = []
     for line in file
         " Do this because vim doesn't seem to like repeating capture groups
-        let id = '\([^ :]\+ \)\='
+        let id = '\([^ :~]\+ \)\='
         let ids = id . id . id . id . id . id . id . id . id
         let match = matchlist(line, '^ *' . a:keyword . ' ' . ids . '[:.].*$')
 
