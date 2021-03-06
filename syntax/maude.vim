@@ -18,7 +18,7 @@ syn keyword maudeImports    protecting including extending
 syn keyword maudeSorts      sort sorts subsort subsorts
 syn keyword maudeStatements op ops var vars eq ceq rl crl
 " syn match   maudeFlags      "\[.*\]"
-syn keyword maudeCommands   reduce load search red unify set rewrite rew
+syn keyword maudeCommands   reduce load search red unify set rewrite rew erewrite erew frew frewrite
 syn match   maudeComment    "\*\*\*.*"
 syn match   maudeComment    "---.*"
 syn match   maudeTODO       "--- TODO.*"
@@ -84,7 +84,7 @@ syn keyword maudeStatements and or xor not implies
 syn keyword maudeLiteral    true false
 syn match   maudeNumber     "\<\(0[0-7]*\|0[xX]\x\+\|\d\+\)[lL]\=\>"
 syn match   maudeFloat      "\(\<\d\+\.\d*\|\.\d\+\)\([eE][-+]\=\d\+\)\=[fFdD]\="
-syn region  maudeLiteral    start=/"/ end=/"/ skip=/\\"/
+syn region  maudeLiteral    start='"' end='"' skip='\\\\\|\\"'
 
 syn match   maudeOp         "/\\\?"
 syn match   maudeOp         "[+*^]"
